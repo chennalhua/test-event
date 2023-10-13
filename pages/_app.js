@@ -17,7 +17,11 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '600779042223725');
-fbq('track', 'PageView');`
+fbq('track', 'PageView');
+document.addEventListener("xxx", function(){
+    fbq('track', 'testButton2');
+  });
+`
             }
         </Script>
         <Component {...pageProps} />

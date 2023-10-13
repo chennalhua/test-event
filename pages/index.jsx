@@ -9,7 +9,7 @@ const Test = () => {
                 `   
                 fbq('track', 'testButton2');
             `}</Script>}
-            <button type='button' onClick={e => setIsClick(true)}>click</button>
+            <button type='button' id='xxx'>click</button>
         </>
     )
 }
