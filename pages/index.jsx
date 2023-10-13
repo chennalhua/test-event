@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from 'react';
-const Index = () => {
-    useEffect(() => {
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-11287166203/71SgCJDn_MwYEPv5kYYq',
-                'event_callback': callback
-            });
-            return false;
-        }
-    })
+import Script from 'next/script';
+import React, { useState } from 'react';
+const Test = () => {
+
+    let [isClick, setIsClick] = useState(false)
     return (
         <>
-            {/* <button onClick={e=>gtag_report_conversion('')}>xxx</button> */}
+            {isClick && <Script>{
+                `   
+                fbq('track', 'testButton2');
+            `}</Script>}
+            <button type='button' onClick={e => setIsClick(true)}>click</button>
         </>
     )
 }
-export default Index
+export default Test
